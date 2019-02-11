@@ -29,8 +29,8 @@ df = pd.read_csv(sys.argv[1])
 discrete_columns = ['gender', 'race', 'race_o', 'samerace', 'field', 'decision']
 all_columns = df.columns.values.tolist()
 continuous_valued_columns = [item for item in all_columns if item not in discrete_columns]
-print all_columns
-print continuous_valued_columns
+#print all_columns
+#print continuous_valued_columns
 
 
 # In[4]:
@@ -42,8 +42,8 @@ pref_score = [0.0, 1.0]
 score = [0.0, 10.0]
 corr_range = [-1.00, 1.00]
 
-#bin_N = 2
-bin_N = int(sys.argv[3])
+bin_N = 5
+#bin_N = int(sys.argv[3])
 #bin_value = [i for i in range(bin_N)]
 bin_seg = [1.000 * i/bin_N for i in range(0, bin_N + 1)]
 #print bin_seg
@@ -72,9 +72,11 @@ for field in continuous_valued_columns:
         for i in range(0, bin_N):
             continuous_valued_columns_bins[field].append(score[0] + bin_seg[i] * (score[1] - score[0]))
 
-print continuous_valued_columns_bins
-print len(continuous_valued_columns_bins)
+#print continuous_valued_columns_bins
+#print len(continuous_valued_columns_bins)
 #print df['pref_o_attractive'].value_counts()
+#print len(df[(df['pref_o_attractive'] > 0.20) & (df['pref_o_attractive'] <= 0.40)])
+#print len(df[(df['pref_o_attractive'] > 0.40) & (df['pref_o_attractive'] <= 0.60)])
 
 
 # In[5]:
@@ -108,16 +110,16 @@ for i in range(row):
                     break
 
 
-# In[ ]:
+# In[6]:
 
 
 df = df.astype('int64')
 df.to_csv(sys.argv[2], index=False)
 #df.to_csv('dating-binned.csv', index=False)
-print continuous_valued_columns_seg
+#print continuous_valued_columns_seg
 
 
-# In[ ]:
+# In[7]:
 
 
 keylist = continuous_valued_columns_seg.keys()

@@ -25,9 +25,9 @@ df = pd.read_csv('dating-binned.csv')
 # Get the 
 df_test = df.sample(frac=0.2, random_state=47)
 df_test.to_csv('testSet.csv', index=False)
-print df_test.index
+#print df_test.index
 # Subtract 
 df_train = df[~df.index.isin(df_test.index)]
 df_train.to_csv('trainingSet.csv', index=False)
-print df_train.index
+#print df_train.index
 
