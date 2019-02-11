@@ -15,7 +15,7 @@ $ python 2_2.py
 ### Question 3
 The bin number is passed as arguments, in this question bin = 5.
 ```
-$ python discretize dating.csv dating-binned.csv 5
+$ python discretize.py dating.csv dating-binned.csv 5
 ```
 ### Question 4
 Split the data to training and test sets.
