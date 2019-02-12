@@ -8,6 +8,7 @@ import sys, os
 import pandas as pd
 import numpy
 import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -15,7 +16,7 @@ import numpy as np
 # In[2]:
 
 
-os.system('python bin-script.py dating.csv dating-binned.csv 5 > /dev/null')
+os.system('python discretize.py dating.csv dating-binned.csv > /dev/null')
 os.system('python split.py')
 
 TRAINING_SET = 'trainingSet.csv'
