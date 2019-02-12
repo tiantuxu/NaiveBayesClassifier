@@ -8,9 +8,9 @@ import sys, os
 import pandas as pd
 import numpy
 import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-
 
 # In[2]:
 
