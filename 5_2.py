@@ -84,7 +84,7 @@ A_test = []
 for bin_N in B:
     print 'Bin size:', bin_N    
     
-    os.system('python discretize.py dating.csv dating-binned.csv ' + str(bin_N) + str(' > /dev/null'))
+    os.system('python bin-script.py dating.csv dating-binned.csv ' + str(bin_N) + str(' > /dev/null'))
     os.system('python split.py')
     
     # Get the data
@@ -155,7 +155,7 @@ plt.ylabel("Accuracy")
 plt.legend()
 
 plt.savefig('./figs/5_2.png')
-plt.show()
+#plt.show()
 
 
 # In[ ]:

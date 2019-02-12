@@ -13,8 +13,8 @@ import pandas as pd
 
 #input_filename = argv[1]
 #output_filename = argv[2]
-sys.argv[1] = 'dating-full.csv'
-sys.argv[2] = 'dating.csv'
+#sys.argv[1] = 'dating-full.csv'
+#sys.argv[2] = 'dating.csv'
 # Load csv
 d = pd.read_csv(sys.argv[1])
 
