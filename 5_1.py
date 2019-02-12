@@ -66,7 +66,7 @@ attr_list = list(df[df.columns.difference(['decision'])])
 neg_num = len(df[df['decision'] == 0])
 pos_num = len(df[df['decision'] == 1])
 
-print dict_table
+#print dict_table
 row_index = df.index.tolist()
 
 #print df

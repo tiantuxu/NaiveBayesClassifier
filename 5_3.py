@@ -15,7 +15,7 @@ import numpy as np
 # In[2]:
 
 
-os.system('python discretize.py dating.csv dating-binned.csv 5 > /dev/null')
+os.system('python bin-script.py dating.csv dating-binned.csv 5 > /dev/null')
 os.system('python split.py')
 
 TRAINING_SET = 'trainingSet.csv'
@@ -129,7 +129,7 @@ plt.ylabel("Accuracy");
 plt.legend()
 
 plt.savefig('./figs/5_3.png')
-plt.show()
+#plt.show()
 
 
 # In[ ]:

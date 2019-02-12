@@ -15,8 +15,8 @@ import numpy as np
 # In[2]:
 
 
-#sys.argv[1] = 'dating.csv'
-#sys.argv[2] = 'dating-binned.csv'
+sys.argv[1] = 'dating.csv'
+sys.argv[2] = 'dating-binned.csv'
 #sys.argv[3] = 5
 # Read the data
 df = pd.read_csv(sys.argv[1])
@@ -42,8 +42,8 @@ pref_score = [0.0, 1.0]
 score = [0.0, 10.0]
 corr_range = [-1.00, 1.00]
 
-bin_N = 5
-#bin_N = int(sys.argv[3])
+#bin_N = 5
+bin_N = int(sys.argv[3])
 #bin_value = [i for i in range(bin_N)]
 bin_seg = [1.000 * i/bin_N for i in range(0, bin_N + 1)]
 #print bin_seg
