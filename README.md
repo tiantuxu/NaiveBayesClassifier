@@ -25,6 +25,13 @@ $ python split.py
 ### Question 5
 ```
 $ python 5_1.py
+```
+The script calls nbc(t_frac).
+```
 $ python 5_2.py
+```
+The script calls nbc(t_frac, df_train), with training data for each bin value discretizes on the fly and passes to the nbc training function.
+```
 $ python 5_3.py
 ```
+The script calls nbc(t_frac) for each f.
