@@ -37,7 +37,7 @@ def nbc(t_frac):
     # Attributes in discrete_columns
     for attr in attr_list:
         dict_attr = {}
-        attr_bin = max(int(df[attr].max()), int(df_test[attr].max()))
+        attr_bin = df[attr].max()
         
         dict_attr['no'] = [1 for i in range(attr_bin + 1)]
         dict_attr['yes'] = [1 for i in range(attr_bin + 1)]
